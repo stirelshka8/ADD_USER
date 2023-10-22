@@ -1,25 +1,33 @@
 users:
-  - username: user1
-    ssh_key: ssh-rsa AAAA...
-    password: 5512
-  - username: user2
-    ssh_key: ssh-rsa BBBB...
-    password: 5512
-  - username: user3
-    ssh_key: ssh-rsa AAAA3...
-    password: 5512
-  - username: user4
-    ssh_key: ssh-rsa BBBB4...
-    password: 5512
-  - username: user5
-    ssh_key: ssh-rsa AAAA5...
-    password: 5512
-  - username: user6
-    ssh_key: ssh-rsa BBBB6...
-    password: 5512
-  - username: user7
-    ssh_key: ssh-rsa AAAA7...
-    password: 5512
-  - username: user8
-    ssh_key: ssh-rsa BBBB8...
-    password: 5512
+- hash_pass: $6$rZUauoTD/wFedRlr$hb4bKC.KEln68CbqeF.eR0z3YoHq7Vy9ZggkigvmR0uUtqzGtO9AjCe82hkaBzxdMJonJfmc3YLjBZ7ltFaC11
+  password: '5512'
+  ssh_key: ssh-rsa AAAA...
+  username: user1
+- hash_pass: $6$wCGyYRa3s56Lw7.G$EvKlIiqvF3N3WQBMHdC3WHjJJ7WnSpw30dp9mrIK.p0pMrjVdv38h2NeEACgvu1qWZ8g2wAja0SbnuzNTMLts.
+  password: '5512'
+  ssh_key: ssh-rsa BBBB...
+  username: user2
+- hash_pass: $6$/K4gD5V.7rVJUenf$GeAd4ItHTXrBuNYCkB2YvxOFoJ5APKnyZxubefdubWSL6rOg6vcBertIGrcTa1xmnw1TcYeJwq/8FRFB6awfD0
+  password: '5512'
+  ssh_key: ssh-rsa AAAA3...
+  username: user3
+- hash_pass: $6$ggMpBRCLDmob8qoy$7QSbZqK/MCirmigcMcQpgCG.7uFcgna0u5RK6YXVE42yQKAs0eFF5MlOCNNv27M6RHvEZgZ.kPJSz5ehgKiFI1
+  password: '5512'
+  ssh_key: ssh-rsa BBBB4...
+  username: user4
+- hash_pass: $6$Fv/S2Jm61HBGqyXm$e0vlwP6w3P2DU3r2VzHeWhwjDb2vswqCyJbtMm23bbQ2BaIY9jt83RiTNY6Di92FeVKtkrrORo6NubwOKhMrI.
+  password: '5512'
+  ssh_key: ssh-rsa AAAA5...
+  username: user5
+- hash_pass: $6$ekkLZhBvBiUT0mHN$JD/m1y/WVG6rUbfznE5BNnBnE6YreLPvGqWfZwnsIh6NT6uP.ylq6h.vr7o.1lSLq/OHeFYL9oryOoeUqIcX3/
+  password: '5512'
+  ssh_key: ssh-rsa BBBB6...
+  username: user6
+- hash_pass: $6$VqoQPDmuaVP7kW3d$Xlu0IS0dqkv4TEkyl9Nsf7TSqmaolT5aNusqNgcmQraTo0UGL1lanTrhZizoA0mYkUPycn55Og3eDD2gCV2jT1
+  password: '5512'
+  ssh_key: ssh-rsa AAAA7...
+  username: user7
+- hash_pass: $6$84u/WKIOMPj84XYa$YgYJwXC13ebQeCzNasPP2AI3vz/IDuNp2.xEM95q/FZFKEf1fhfSLwBhlM9pElXaoP8Pu5eCHdO9Pc0TkdcHP1
+  password: '5512'
+  ssh_key: ssh-rsa BBBB8...
+  username: user8

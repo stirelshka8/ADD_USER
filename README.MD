@@ -3,7 +3,7 @@
 В файле server.yml в формате:
 
 ``` bash
-- hostname: admlab.ddns.net
+- hostname: admlib.ddns.net
   port: 1522
 - hostname: 192.168.1.111
 ```
@@ -14,19 +14,42 @@
 ``` bash
 users:
   - username: user1
-    password: user1password
+    password: "user1password"
     ssh_key: ssh-rsa AAAA1234...
   - username: user2
-    password: user2password
+    password: "user2password"
     ssh_key: ssh-rsa BBBB5678...
 ```
-необходимо добавить пользователей и их публичные ssh ключи.
+необходимо добавить пользователей и их публичные ssh ключи. Пароль в ОБЯЗАТЕЛЬНОМ порядке в ковычках.
+После запуска в файле появится поле hash_pass с зашифрованным паролем. При каждом запуске будет обновлятся.
 
 При запуске необходимо выбрать метод авторизации (ssh ключ или пароль).
 
 ## Установка и запуск
 
-Используемые модули стандартные и есть в python из коробки, ничего ставить не нужно.
+Создание виртуального окружения:
+``` sh
+python3 -m venv venv
+```
+
+Активация:
+
+``` sh
+source venv/bin/activate
+```
+
+Деактивация:
+
+``` sh
+deactivate
+```
+
+Установка зависимостей:
+
+``` python
+pip install -r req.txt
+```
+
 
 Запускать командой:
 
