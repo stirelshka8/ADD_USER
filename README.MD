@@ -2,16 +2,17 @@
 
 В файле server.yml в формате:
 
-``` bash
+```bash
 - hostname: admlib.ddns.net
   port: 1522
 - hostname: 192.168.1.111
 ```
+
 прописать сервера на которых необходимо выполнить добавление пользователей. Если не указать порт то будет использован стандартный.
 
 В файле users.yml в формате:
 
-``` bash
+```bash
 users:
   - username: user1
     password: "user1password"
@@ -20,6 +21,7 @@ users:
     password: "user2password"
     ssh_key: ssh-rsa BBBB5678...
 ```
+
 необходимо добавить пользователей и их публичные ssh ключи. Пароль в ОБЯЗАТЕЛЬНОМ порядке в ковычках.
 После запуска в файле появится поле hash_pass с зашифрованным паролем. При каждом запуске будет обновлятся.
 
@@ -28,31 +30,31 @@ users:
 ## Установка и запуск
 
 Создание виртуального окружения:
-``` sh
+
+```sh
 python3 -m venv venv
 ```
 
 Активация:
 
-``` sh
+```sh
 source venv/bin/activate
 ```
 
 Деактивация:
 
-``` sh
+```sh
 deactivate
 ```
 
 Установка зависимостей:
 
-``` python
+```python
 pip install -r req.txt
 ```
 
-
 Запускать командой:
 
-``` python
+```python
 sudo python3 add_user.py
 ```
