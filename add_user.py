@@ -7,7 +7,7 @@ try:
     # Чтение данных о серверах из файла YAML
     with open('servers.yml', 'r') as server_file:
         server_data = yaml.safe_load(server_file)
-
+    
     # Генерация временного инвентарного файла
     temp_inventory_file = 'temp_inventory.ini'
     with open(temp_inventory_file, 'w') as temp_inventory:
@@ -77,7 +77,7 @@ try:
 
     # Выполнение плейбука с использованием временного инвентарного файла
     subprocess.call(['ansible-playbook', '-i', temp_inventory_file, 'add_users.yml'])
-except:
+except :
     print("\n\n\nЧто то пошло не так, что конкретно хз...\n\n\n")
 finally:
     # Удаление временных файлов
