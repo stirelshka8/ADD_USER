@@ -1,25 +1,9 @@
 users:
-- password: '333'
-  ssh_key: '222'
-  username: '111'
-- password: '123'
-  ssh_key: '654'
-  username: '789'
-- password: '987654'
-  ssh_key: '123456'
-  username: admin
-- password: '333'
-  ssh_key: '222'
-  username: '111'
-- password: '333'
-  ssh_key: '222'
-  username: '111'
-- password: '123'
-  ssh_key: '654'
-  username: '789'
-- password: '987654'
-  ssh_key: '123456'
-  username: admin
-- password: pedros
-  ssh_key: '2222'
-  username: '111'
+- hash_pass: $6$8Wfc9GyHKSPv0174$apWwrJVB0Env.1QFMGIEPUHvDXU8decWnlT9UVxDwBM2WX65wviH58pu5B243E5RMeqk4QTjhlWsgeHIPFTBJ1
+  password: user1password
+  ssh_key: ssh-rsa AAAA1234..
+  username: user1
+- hash_pass: $6$MJ.G87Fkme4CeQot$tz41nma8kV1Cv4Cp/1.QTVhgSpzxEVOIPhOwcD95gen5mgtbushKWAg4K/KdVU.yITidAWgh5I3eIphn1Dcu/0
+  password: '551333'
+  ssh_key: '45444444'
+  username: user1
