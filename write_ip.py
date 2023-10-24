@@ -12,7 +12,7 @@ with open('servers.yml', 'w') as yml_file:
         parts = ip.split(':')
         hostname = parts[0]
         port = parts[1] if len(parts) > 1 else '22'
-        server_entry = f'hostname: {hostname}\n  port: {port}\n'
+        server_entry = f'- hostname: {hostname}\n  port: {port}\n'
         yml_file.write(server_entry)
 
 print("Готово! Данные были добавлены в servers.yml и удалены из ip_addresses.txt")
