@@ -99,8 +99,7 @@ try:
         'vars': {
             'users_data': users_data['users'],
             'ansible_ssh_pass': password if authentication_choice == 'pass' else None,
-            'ansible_ssh_user': ssh_user,
-        },
+            'ansible_ssh_user': ssh_user},
         'tasks': []
     }
 
@@ -146,4 +145,7 @@ except Exception as e:
     print(f"Произошла ошибка: {str(e)}")
 finally:
     # Удаление временных файлов
-    subprocess.call(['rm', temp_inventory_file, file_adduser])
+    try:
+        subprocess.call(['rm', temp_inventory_file, file_adduser])
+    except:
+        print("А нечего удалять!")
