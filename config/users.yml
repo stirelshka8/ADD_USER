@@ -1,0 +1,4 @@
+users:
+- password: '5512'
+  ssh_key: ssh-rsa AAAAA...
+  username: user
