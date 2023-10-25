@@ -1,4 +1,3 @@
-import time
 from pass_hash import update_users_passwords
 from write_ip import update_servers_config
 from getpass import getpass
@@ -21,6 +20,7 @@ file_adduser = config.get('FILES', 'file_adduser')
 file_ip = config.get('FILES', 'file_ip')
 
 update_users_passwords(file_user)
+update_servers_config(file_ip, file_servers)
 
 
 def get_known_hosts_path():
@@ -66,7 +66,7 @@ try:
     with open(file_settnings, 'r') as settings_file:
         settings_data = yaml.safe_load(settings_file)
         ssh_user = settings_data['ssh_user']
-
+     
     # Генерация временного инвентарного файла
   
     with open(temp_inventory_file, 'w') as temp_inventory:
@@ -76,16 +76,7 @@ try:
             ssh_port = server_info.get('port', 22)  # По умолчанию используется порт 22, если не указан другой
             temp_inventory.write(f'{hostname} ansible_ssh_port={ssh_port} ansible_ssh_host={hostname}\n')
 
-    update_choice = input("Обновить файл серверов (yes/no): ").strip().lower()
-
-    if update_choice not in ['yes', 'no']:
-        print("Неправильный выбор авторизации. Введите 'pass' или 'key'.")
-        exit(1)
-
-    if update_choice == 'yes':
-        update_servers_config(file_ip, file_servers)
-        time.sleep(1)
-        update_known_hosts(hostname, ssh_port)
+    update_known_hosts(hostname, ssh_port)
 
     # Выбор авторизации
     authentication_choice = input("Выберите метод авторизации (pass/key): ").strip().lower()
