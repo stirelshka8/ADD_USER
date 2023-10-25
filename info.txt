@@ -1,0 +1,6 @@
+AltLinux - FAILED
+AstraLinux - PASSED
+RedHat - 
+Ubuntu - 
+RedOS - 
+CentOS - 
