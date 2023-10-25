@@ -49,12 +49,12 @@ def update_known_hosts(hostname, port):
             with open(known_hosts_file_path, "a") as known_hosts_file:
                 known_hosts_file.write(known_hosts_entry)
         else:
-            print(f"Host '{hostname}' is already in known_hosts. Skipping update.")
+            print(f"Хост '{hostname}' уже находится в known_hosts. Пропуск обновления.")
 
     except subprocess.CalledProcessError as e:
-        print(f"Error running ssh-keyscan: {str(e)}")
+        print(f"Ошибка запуска ssh-keyscan: {str(e)}")
     except Exception as e:
-        print(f"Error adding host key to known_hosts: {str(e)}")
+        print(f"Ошибка при добавлении ключа хоста в known_hosts: {str(e)}")
 
 
 try:
